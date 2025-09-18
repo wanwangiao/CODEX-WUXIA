@@ -1,0 +1,21 @@
+[
+  {
+    "name": "陸雲",
+    "maxHP": 1200,
+    "baseSpeed": 720,
+    "counterRating": 30,
+    "script": [
+      {"move": "flying_swallow_combo"}
+    ]
+  },
+  {
+    "name": "秦霜",
+    "maxHP": 1250,
+    "baseSpeed": 560,
+    "counterRating": 60,
+    "script": [
+      {"move": "soft_cloud_counter", "requiresStatusAbsent": "counter_prepped"},
+      {"move": "taixu_cloud_palm", "requiresStatusAbsent": "counter_prepped"}
+    ]
+  }
+]
