@@ -1,0 +1,105 @@
+[
+  {
+    "id": "flying_swallow_combo",
+    "name": "飛燕連環",
+    "weaponFamily": "拳掌",
+    "tier": "specialization",
+    "tags": ["yang", "fast"],
+    "speedBias": 0.85,
+    "momentum": 120,
+    "cooldown": 3,
+    "template": {
+      "setup": ["{attacker}腳尖點地，身影如燕翻飛。"],
+      "strike": ["掌影連綿不絕，施出『{moveName}』三連快拍。"],
+      "afterglow": ["{defender}胸口氣血翻湧，只得連退。"]
+    },
+    "effects": {
+      "damage": {"base": 120},
+      "statusesApplied": [
+        {
+          "id": "winded",
+          "chance": 0.2,
+          "durationTicks": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "soft_cloud_counter",
+    "name": "柔雲化勁",
+    "weaponFamily": "拳掌",
+    "tier": "specialization",
+    "tags": ["yin", "counter"],
+    "kind": "counter_prep",
+    "speedBias": 0.9,
+    "momentum": 60,
+    "cooldown": 4,
+    "template": {
+      "setup": ["{attacker}氣沉丹田，雙掌如雲舒卷。"],
+      "strike": ["她守中帶攻，靜候敵手破綻。"],
+      "afterglow": ["一縷柔力盤踞掌心，殺機暗伏。"]
+    },
+    "effects": {},
+    "counterPrep": {
+      "rating": 95,
+      "windowTicks": 6,
+      "successNarration": [
+        "{defender}掌心輕旋，卸去來勢並反震勁道。"
+      ],
+      "failureNarration": [
+        "{defender}試圖拆招，但仍被勁力逼退。"
+      ],
+      "damage": {"base": 80},
+      "gaugeReward": 200,
+      "failGaugeBonus": 80,
+      "applyStatusOnTarget": {
+        "id": "slow",
+        "durationTicks": 4,
+        "magnitude": 0.75
+      }
+    }
+  },
+  {
+    "id": "taixu_cloud_palm",
+    "name": "太虛雲掌",
+    "weaponFamily": "拳掌",
+    "tier": "ultimate",
+    "tags": ["yin", "burst"],
+    "speedBias": 0.95,
+    "momentum": 90,
+    "cooldown": 4,
+    "template": {
+      "setup": ["{attacker}雲袖翻舞，掌勢若虛若實。"],
+      "strike": ["一記『{moveName}』推山倒海，柔勁裡暗藏剛力。"],
+      "afterglow": ["{defender}氣血翻湧，足下虛浮。"]
+    },
+    "effects": {
+      "damage": {"base": 210},
+      "statusesApplied": [
+        {
+          "id": "stagger",
+          "chance": 0.7,
+          "durationTicks": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "stone_breaker_swing",
+    "name": "破石橫掃",
+    "weaponFamily": "棍",
+    "tier": "foundation",
+    "tags": ["yang", "heavy"],
+    "speedBias": 0.8,
+    "momentum": 100,
+    "cooldown": 2,
+    "template": {
+      "setup": ["{attacker}大喝一聲，棍影如山岳壓頂。"],
+      "strike": ["橫掃千軍的一擊，直取對手護體真氣。"],
+      "afterglow": ["棍勢餘威不減，氣浪震盪全場。"]
+    },
+    "effects": {
+      "damage": {"base": 150}
+    }
+  }
+]
